@@ -78,17 +78,17 @@ class Piggy(pigo.Pigo):
             self.encR(18)
 
     def sprinkler(self):
-        for x in range(self.MIDPOINT - 30, self.MIDPOINT + 30):
+        for x in range(self.MIDPOINT - 30, self.MIDPOINT + 30, 3):
             self.servo(x)
 
     def freakout(self):
         for x in range(5):
-            self.encB(9)
-            self.encL(9)
-            self.encF(9)
-            self.encR(9)
-            self.encB(4)
-            self.encF(4)
+            self.encB(1)
+            self.encL(1)
+            self.encF(1)
+            self.encR(1)
+            self.encB(1)
+            self.encF(1)
 
     def obstacle_count(self):
         """scans and estimates the number of obstacles within sight"""
