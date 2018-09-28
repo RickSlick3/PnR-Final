@@ -65,32 +65,33 @@ class Piggy(pigo.Pigo):
         self.shaky_shaky()
         self.sprinkler()
 
+    def x_up(self):
+        for x in range(5):
+            self.encB(9)
+            self.encR(9)
+            self.encF(9)
+            self.encL(9)
+            self.encB(9)
+            self.encL(9)
+            self.encF(9)
+            self.encR()
+
     def back_step(self):
         for x in range(3):
-            self.encF(9)
-            self.encB(9)
-            self.encB(9)
+            self.encF(18)
+            self.encB(6)
+            self.encB(6)
+            self.encB(6)
 
     def shaky_shaky(self):
         for x in range(5):
-            self.encR(18)
-            self.encL(36)
-            self.encR(18)
+            self.encR(15)
+            self.encL(30)
+            self.encR(15)
 
     def sprinkler(self):
         for x in range(self.MIDPOINT - 30, self.MIDPOINT + 30, 3):
             self.servo(x)
-
-    def x_up(self):
-        for x in range(5):
-            self.encB(9)
-            self.encR(15)
-            self.encF(9)
-            self.encL(15)
-            self.encB(9)
-            self.encL(15)
-            self.encF(9)
-            self.encR(15)
 
     def obstacle_count(self):
         """scans and estimates the number of obstacles within sight"""
