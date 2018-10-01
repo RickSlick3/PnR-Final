@@ -70,13 +70,14 @@ class Piggy(pigo.Pigo):
             self.encB(8)
             self.encR(2)
             self.encF(9)
-            self.encL(2)
+            self.encL(3)
             self.encB(8)
-            self.encL(2)
+            self.encL(3)
             self.encF(9)
             self.encR(2)
 
     def back_step(self):
+        return
         for x in range(3):
             self.encF(18)
             self.encB(6)
@@ -84,12 +85,14 @@ class Piggy(pigo.Pigo):
             self.encB(6)
 
     def shaky_shaky(self):
+        return
         for x in range(5):
             self.encR(12)
             self.encL(24)
             self.encR(12)
 
     def sprinkler(self):
+        return
         for x in range(self.MIDPOINT - 30, self.MIDPOINT + 30):
             self.servo(x)
 
