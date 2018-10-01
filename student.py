@@ -67,14 +67,14 @@ class Piggy(pigo.Pigo):
 
     def x_up(self):
         for x in range(5):
-            self.encB(9)
-            self.encR(5)
+            self.encB(8)
+            self.encR(2)
             self.encF(9)
-            self.encL(5)
-            self.encB(9)
-            self.encL(5)
+            self.encL(2)
+            self.encB(8)
+            self.encL(2)
             self.encF(9)
-            self.encR(5)
+            self.encR(2)
 
     def back_step(self):
         for x in range(3):
