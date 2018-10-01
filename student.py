@@ -70,9 +70,9 @@ class Piggy(pigo.Pigo):
             self.encB(6)
             self.encR(2)
             self.encF(6)
-            self.encL(3)
+            self.encL(2)
             self.encB(6)
-            self.encL(3)
+            self.encL(2)
             self.encF(6)
             self.encR(2)
 
