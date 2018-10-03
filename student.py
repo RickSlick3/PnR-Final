@@ -61,13 +61,12 @@ class Piggy(pigo.Pigo):
         if not self.safe_to_dance():
             print("\n----NOT SAFE TO DANCE----\n")
             return False
-        if self.safe_to_dance():
-            print("\n---- LET'S DANCE ----\n")
+        print("\n---- LET'S DANCE ----\n")
         ##### WRITE YOUR FIRST PROJECT HERE
-            self.x_up()
-            self.back_step()
-            self.shaky_shaky()
-            self.sprinkler()
+        self.x_up()
+        self.back_step()
+        self.shaky_shaky()
+        self.sprinkler()
 
     def safe_to_dance(self):
         """circles around and checks for any obstacles"""
@@ -81,13 +80,13 @@ class Piggy(pigo.Pigo):
     def x_up(self):
         for x in range(5):
             self.encB(6)
-            self.encR(1.5)
+            self.encR(2)
             self.encF(6)
             self.encL(2)
             self.encB(6)
             self.encL(2)
             self.encF(6)
-            self.encR(1.5)
+            self.encR(2)
 
     def back_step(self):
         return
