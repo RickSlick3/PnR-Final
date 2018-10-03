@@ -76,7 +76,7 @@ class Piggy(pigo.Pigo):
             if not self.is_clear():
                 return False
             self.encR(6)  # IS THIS 90 DEGREES???
-            return True
+        return True
 
     def x_up(self):
         for x in range(5):
