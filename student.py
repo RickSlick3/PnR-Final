@@ -63,6 +63,7 @@ class Piggy(pigo.Pigo):
             return False
         print("\n---- LET'S DANCE ----\n")
         ##### WRITE YOUR FIRST PROJECT HERE
+        self.fix()
         self.x_up()
         self.back_step()
         self.shaky_shaky()
@@ -77,7 +78,11 @@ class Piggy(pigo.Pigo):
             self.encR(6)  # IS THIS 90 DEGREES???
         return True
 
+    def fix(self):
+        encR(6.5)
+
     def x_up(self):
+        return
         for x in range(5):
             self.encB(6)
             self.encR(2)
