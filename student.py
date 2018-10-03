@@ -79,7 +79,7 @@ class Piggy(pigo.Pigo):
         return True
 
     def fix(self):
-        encR(6.5)
+        encR(24)
 
     def x_up(self):
         return
