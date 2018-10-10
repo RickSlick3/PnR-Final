@@ -88,7 +88,7 @@ class Piggy(pigo.Pigo):
             self.encB(9)
             self.encL(2)
             self.encF(9)
-            self.encR(2)
+            self.encR(1)
 
     def back_step(self):
         return
