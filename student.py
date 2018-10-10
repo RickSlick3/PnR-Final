@@ -63,11 +63,11 @@ class Piggy(pigo.Pigo):
             return False
         print("\n---- LET'S DANCE ----\n")
         ##### WRITE YOUR FIRST PROJECT HERE
-        self.fix()
         self.x_up()
         self.back_step()
         self.shaky_shaky()
         self.sprinkler()
+"""NOTE: encR(28)~~360, encR(6)~~90, encL(__)~~360, encL(_)~~90 """
 
     def safe_to_dance(self):
         """circles around and checks for any obstacles"""
@@ -75,7 +75,7 @@ class Piggy(pigo.Pigo):
         for x in range(4):
             if not self.is_clear():
                 return False
-            self.encR(6)  # IS THIS 90 DEGREES???
+            self.encR(7)  # IS THIS 90 DEGREES???
         return True
 
     def fix(self):
