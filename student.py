@@ -77,17 +77,17 @@ class Piggy(pigo.Pigo):
                 return False
             self.encR(6)  # IS THIS 90 DEGREES???
         return True
-        self.encR(3)
 
     def x_up(self):
-        for x in range(5):
-            self.encB(6)
+        self.encR(3)
+        for x in range(4):
+            self.encB(9)
             self.encR(2)
-            self.encF(6)
+            self.encF(9)
             self.encL(2)
-            self.encB(6)
+            self.encB(9)
             self.encL(2)
-            self.encF(6)
+            self.encF(9)
             self.encR(2)
 
     def back_step(self):
