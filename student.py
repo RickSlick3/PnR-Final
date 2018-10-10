@@ -79,7 +79,6 @@ class Piggy(pigo.Pigo):
         return True
 
     def x_up(self):
-        self.encR(3)
         for x in range(4):
             self.encB(9)
             self.encR(2)
