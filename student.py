@@ -67,7 +67,7 @@ class Piggy(pigo.Pigo):
         self.back_step()
         self.shaky_shaky()
         self.sprinkler()
-"""NOTE: encR(28)~~360, encR(6)~~90, encL(__)~~360, encL(_)~~90 """
+        """NOTE: encR(28)~~360, encR(6)~~90, encL(__)~~360, encL(_)~~90 """
 
     def safe_to_dance(self):
         """circles around and checks for any obstacles"""
