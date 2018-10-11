@@ -80,10 +80,12 @@ class Piggy(pigo.Pigo):
         return True
 
     def fix(self):
+        """makes the robot face forward again"""
         encR(2)
-    """makes the robot face forward again"""
+
 
     def x_up(self):
+        """supposed to make an X formation"""
         for x in range(4):
             self.encB(9)
             self.encR(2)
@@ -93,15 +95,16 @@ class Piggy(pigo.Pigo):
             self.encL(2)
             self.encF(9)
             self.encR(2)
-        """supposed to make an X formation"""
+
 
     def back_step(self):
+        """supposed to roll forward, then back up 3 separate times"""
         for x in range(3):
             self.encF(18)
             self.encB(6)
             self.encB(6)
             self.encB(6)
-        """supposed to roll forward, then back up 3 separate times"""
+
 
     def shaky_shaky(self):
         return
