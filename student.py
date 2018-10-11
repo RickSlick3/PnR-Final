@@ -83,7 +83,6 @@ class Piggy(pigo.Pigo):
         """makes the robot face forward again"""
         encR(2)
 
-
     def x_up(self):
         """supposed to make an X formation"""
         for x in range(4):
@@ -95,7 +94,6 @@ class Piggy(pigo.Pigo):
             self.encL(2)
             self.encF(9)
             self.encR(2)
-
 
     def back_step(self):
         """supposed to roll forward, then back up 3 separate times"""
