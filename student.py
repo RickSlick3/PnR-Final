@@ -63,6 +63,7 @@ class Piggy(pigo.Pigo):
             return False
         print("\n---- LET'S DANCE ----\n")
         ##### WRITE YOUR FIRST PROJECT HERE
+        self.fix()
         self.x_up()
         self.back_step()
         self.shaky_shaky()
@@ -78,6 +79,10 @@ class Piggy(pigo.Pigo):
             self.encR(6)  # IS THIS 90 DEGREES???
         return True
 
+    def fix(self):
+        encR(2)
+    """makes the robot face forward again"""
+
     def x_up(self):
         for x in range(4):
             self.encB(9)
@@ -88,14 +93,15 @@ class Piggy(pigo.Pigo):
             self.encL(2)
             self.encF(9)
             self.encR(2)
+        """supposed to make an X formation"""
 
     def back_step(self):
-        return
         for x in range(3):
             self.encF(18)
             self.encB(6)
             self.encB(6)
             self.encB(6)
+        """supposed to roll forward, then back up 3 separate times"""
 
     def shaky_shaky(self):
         return
