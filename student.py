@@ -114,18 +114,8 @@ class Piggy(pigo.Pigo):
 
     def sprinkler(self):
         """supposed to make servo move from side to side"""
-        for x in range(5):
-            self.servo(50)
-            self.servo(55)
-            self.servo(60)
-            self.servo(65)
-            self.servo(70)
-            self.servo(75)
-            self.servo(80)
-            self.servo(85)
-            self.servo(90)
-            self.servo(95)
-            self.servo(100)
+        for x in range(self.MIDPOINT-40, self.MIDPOINT+40, 5):
+            self.servo(x)
 
     def surprise(self):
         """creates the coolest move you have ever seen"""
