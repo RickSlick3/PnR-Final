@@ -130,23 +130,23 @@ class Piggy(pigo.Pigo):
     def surprise(self):
         """creates the coolest move you have ever seen"""
         for x in range(2):
-        self.encF(30)
-        self.encL(5)
-        self.encB(5)
-        self.encR(10)
-        self.encB(5)
-        self.encL(5)
-        self.encB(5)
-        self.encR(10)
-        self.encB(5)
-        self.encL(5)
-        self.encB(5)
-        self.encR(10)
-        self.encB(5)
-        self.encL(5)
-        self.encB(5)
-        self.encR(10)
-        self.encB(5
+            self.encF(30)
+            self.encL(5)
+            self.encB(5)
+            self.encR(10)
+            self.encB(5)
+            self.encL(5)
+            self.encB(5)
+            self.encR(10)
+            self.encB(5)
+            self.encL(5)
+            self.encB(5)
+            self.encR(10)
+            self.encB(5)
+            self.encL(5)
+            self.encB(5)
+            self.encR(10)
+            self.encB(5
 
     def obstacle_count(self):
         """scans and estimates the number of obstacles within sight"""
