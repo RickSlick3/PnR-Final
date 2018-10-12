@@ -104,7 +104,6 @@ class Piggy(pigo.Pigo):
             self.encB(6)
             self.encB(6)
 
-
     def shaky_shaky(self):
         """supposed to turn back and forth semi-rapidly"""
         for x in range(5):
@@ -114,8 +113,9 @@ class Piggy(pigo.Pigo):
 
     def sprinkler(self):
         """supposed to make servo move from side to side"""
-        for x in range(self.MIDPOINT-40, self.MIDPOINT+40, 5):
-            self.servo(x)
+        for x in range(7):
+            for x in range(self.MIDPOINT-40, self.MIDPOINT+40, 5):
+                self.servo(x)
 
     # FROM GARRET
     def surprise(self):
