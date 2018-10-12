@@ -117,7 +117,7 @@ class Piggy(pigo.Pigo):
         for x in range(self.MIDPOINT-40, self.MIDPOINT+40, 5):
             self.servo(x)
 
-    # FROM GARRETT
+    # FROM GARRET
     def surprise(self):
         """creates the coolest move you have ever seen"""
         for x in range(2):
