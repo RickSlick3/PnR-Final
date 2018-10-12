@@ -113,8 +113,8 @@ class Piggy(pigo.Pigo):
 
     def sprinkler(self):
         """supposed to make servo move from side to side"""
-        for x in range(7):
-            for x in range(self.MIDPOINT-40, self.MIDPOINT+40, 5):
+        for x in range(5):
+            for x in range(self.MIDPOINT-50, self.MIDPOINT+50, 5):
                 self.servo(x)
 
     # FROM GARRET
