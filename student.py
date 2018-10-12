@@ -82,7 +82,7 @@ class Piggy(pigo.Pigo):
 
     def fix(self):
         """makes the robot face forward again"""
-        encR(2)
+        self.encR(2)
 
     def x_up(self):
         """supposed to make an X formation"""
