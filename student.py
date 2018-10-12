@@ -68,6 +68,7 @@ class Piggy(pigo.Pigo):
         self.back_step()
         self.shaky_shaky()
         self.sprinkler()
+        self.surprise()
         """NOTE: encR(28)~~360, encR(6)~~90, encL(__)~~360, encL(_)~~90 """
 
     def safe_to_dance(self):
@@ -105,16 +106,47 @@ class Piggy(pigo.Pigo):
 
 
     def shaky_shaky(self):
-        return
+        """supposed to turn back and forth semi-rapidly"""
         for x in range(5):
             self.encR(12)
             self.encL(24)
             self.encR(12)
 
     def sprinkler(self):
-        return
-        for x in range(self.MIDPOINT - 30, self.MIDPOINT + 30):
-            self.servo(x)
+        """supposed to make servo move from side to side"""
+        for x in range(5)
+            self.servo(50)
+            self.servo(55)
+            self.servo(60)
+            self.servo(65)
+            self.servo(70)
+            self.servo(75)
+            self.servo(80)
+            self.servo(85)
+            self.servo(90)
+            self.servo(95)
+            self.servo(100)
+
+    def surprise(self):
+        """creates the coolest move you have ever seen""""
+        for x in range(2):
+        self.encF(30)
+        self.encL(5)
+        self.encB(5)
+        self.encR(10)
+        self.encB(5)
+        self.encL(5)
+        self.encB(5)
+        self.encR(10)
+        self.encB(5)
+        self.encL(5)
+        self.encB(5)
+        self.encR(10)
+        self.encB(5)
+        self.encL(5)
+        self.encB(5)
+        self.encR(10)
+        self.encB(5
 
     def obstacle_count(self):
         """scans and estimates the number of obstacles within sight"""
