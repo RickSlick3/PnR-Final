@@ -45,7 +45,7 @@ class Piggy(pigo.Pigo):
                 "o": ("Obstacle count", self.obstacle_count),
                 "c": ("Calibrate", self.calibrate),
                 "s": ("Check status", self.status),
-                "h": ("Open House", self.open_house(self)),
+                "h": ("Open House", self.open_house),
                 "q": ("Quit", quit_now)
                 }
         # loop and print the menu...
