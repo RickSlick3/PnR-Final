@@ -61,10 +61,10 @@ class Piggy(pigo.Pigo):
         while True:
             if self.dist() < 10:
                 for x in range(5):
-                self.servo(69)
-                self.servo(79)
-            self.servo(self.MIDPOINT)
-            self.encB(5)
+                    self.servo(69)
+                    self.servo(79)
+                self.servo(self.MIDPOINT)
+                self.encB(5)
 
             elif self.dist() < 20:
                 self.servo(24)
