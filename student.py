@@ -60,8 +60,15 @@ class Piggy(pigo.Pigo):
         "reacts to dist measurement in a cute way"
         while True:
             if self.dist() < 20:
+                self.servo(24)
+                self.servo(124)
+                self.servo(24)
+                self.servo(124)
                 self.encR(6)
             time.sleep(.1)
+            if self.dist() < 20:
+                self.encR(28)
+                self.encF(20)
 
     # YOU DECIDE: How does your GoPiggy dance?
     def dance(self):
@@ -77,7 +84,7 @@ class Piggy(pigo.Pigo):
         self.shaky_shaky()
         self.sprinkler()
         self.surprise()
-        """NOTE: encR(28)~~360, encR(6)~~90, encL(__)~~360, encL(_)~~90 """
+        """NOTE: encR(28)~~360, encR(6)~~90"""
 
     def safe_to_dance(self):
         """circles around and checks for any obstacles"""
