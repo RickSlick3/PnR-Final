@@ -59,16 +59,20 @@ class Piggy(pigo.Pigo):
     def open_house(self):
         "reacts to dist measurement in a cute way"
         while True:
-            if self.dist() < 20:
-                self.servo(24)
-                self.servo(124)
-                self.servo(24)
-                self.servo(124)
-                self.encR(6)
+            if self.dist() < 10:
+                for x in range(5):
+                self.servo(69)
+                self.servo(79)
+            self.servo(self.MIDPOINT)
+            self.encB(5)
 
-            elif self.dist() > 20:
-                self.encR(28)
-                self.encF(15)
+            elif self.dist() < 20:
+                self.servo(24)
+                self.servo(124)
+                self.servo(24)
+                self.servo(124)
+                self.servo(self.MIDPOINT)
+                self.encB(5)
 
             time.sleep(.1)
 
