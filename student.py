@@ -74,7 +74,7 @@ class Piggy(pigo.Pigo):
                 self.servo(self.MIDPOINT)
                 self.encB(5)
 
-            else self.dist() > 20:
+            elif self.dist() > 20:
                 self.encR(28)
                 self.encF(5)
 
