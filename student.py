@@ -65,10 +65,12 @@ class Piggy(pigo.Pigo):
                 self.servo(24)
                 self.servo(124)
                 self.encR(6)
-            time.sleep(.1)
-            if self.dist() < 20:
+
+            elif self.dist() > 20:
                 self.encR(28)
-                self.encF(20)
+                self.encF(15)
+
+            time.sleep(.1)
 
     # YOU DECIDE: How does your GoPiggy dance?
     def dance(self):
