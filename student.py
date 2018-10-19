@@ -77,8 +77,8 @@ class Piggy(pigo.Pigo):
             elif self.dist() > 20:
                 self.encR(28)
                 self.encF(5)
-"""Should rotate 360 degrees then roll forward again"""
-        time.sleep(.1)
+            """Should rotate 360 degrees then roll forward again"""
+            time.sleep(.1)
 
     # YOU DECIDE: How does your GoPiggy dance?
     def dance(self):
