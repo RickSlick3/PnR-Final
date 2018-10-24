@@ -73,7 +73,7 @@ class Piggy(pigo.Pigo):
                     # add up the numbers to right_total
                     right_total += self.scan[angle]
             # loop from self.MIDPOINT to self.MIDPOINT + 60
-            for angle in range(self.MIDPOINT + 60, self.MIDPOINT):
+            for angle in range(self.MIDPOINT, self.MIDPOINT + 60):
                 if self.scan[angle]:
                     # add up the numbers to left_total
                     left_total += self.scan[angle]
