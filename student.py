@@ -87,6 +87,7 @@ class Piggy(pigo.Pigo):
                 self.encL(4)
         else:
             # turns until clear
+            pass
 
     def open_house(self):
         """reacts to dist measurement in a cute way"""
