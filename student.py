@@ -89,7 +89,7 @@ class Piggy(pigo.Pigo):
             # turns until clear
 
     def open_house(self):
-        "reacts to dist measurement in a cute way"
+        """reacts to dist measurement in a cute way"""
         while True:
             if self.dist() < 10:
                 for x in range(5):
