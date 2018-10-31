@@ -234,7 +234,7 @@ class Piggy(pigo.Pigo):
             if self.is_clear():
                 self.cruise()
             else:
-                self.encR(7)
+                self.choose_path()
 
     def cruise(self):
         """ drive straight while path is clear """
@@ -263,6 +263,35 @@ class Piggy(pigo.Pigo):
                 self.servo(self.MIDPOINT)
                 return False
         self.servo(self.MIDPOINT)
+        return True
+
+    def choose_path(self):
+        """turns towards the more open space"""
+        choice = raw_input("Left/Right or Turn Until Clear?")
+
+        self.wide_scan(count=3) # scan the area
+        # picks left or right
+        # create two variables, left_total and right_total
+        left_total = 0
+        right_total = 0
+        # loop from self.MIDPOINT - 60 to self.MIDPOINT
+        for angle in range(self.MIDPOINT - 60, self.MIDPOINT):
+            if self.scan[angle]:
+                # add up the numbers to right_total
+                right_total += self.scan[angle]
+        # loop from self.MIDPOINT to self.MIDPOINT + 60
+        for angle in range(self.MIDPOINT, self.MIDPOINT + 60):
+            if self.scan[angle]:
+                # add up the numbers to left_total
+                left_total += self.scan[angle]
+        # if right is bigger:
+        if right_total > left_total:
+            # turn right
+            self.encR(4)
+        # if left is bigger:
+        if left_total > right_total:
+            # turn left
+            self.encL(4)
         return True
 
 ####################################################
