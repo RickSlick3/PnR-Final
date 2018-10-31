@@ -232,7 +232,6 @@ class Piggy(pigo.Pigo):
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         while True:
             if self.is_clear():
-            ##### doesnt scan wide enough
                 self.cruise()
             else:
                 self.encR(7)
