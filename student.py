@@ -234,12 +234,13 @@ class Piggy(pigo.Pigo):
             if self.is_clear():
                 self.cruise()
             else:
-                self.encB(8)
+                self.encB(4)
                 self.choose_path()
 
     def cruise(self):
         """ drive straight while path is clear """
         self.fwd()
+        ### want to make the robot scan a small area while it drives
         while self.dist() > self.SAFE_STOP_DIST:
             time.sleep(.25)
         self.stop()
@@ -291,6 +292,27 @@ class Piggy(pigo.Pigo):
         if left_total > right_total:
             # turn left
             self.encL(4)
+        return True
+
+    def tight_scan(self):
+        ### want to edit this method to be able to activate this while cruising
+        """does a narrow scan while cruising"""
+        print("Running the tight_scan method.")
+        for x in range((self.MIDPOINT - 5), (self.MIDPOINT + 5), 5):
+            self.servo(x)
+            scan1 = self.dist()
+            # double check the distance
+            scan2 = self.dist()
+            # if I found a different distance the second time....
+            if abs(scan1 - scan2) > 2:
+                scan3 = self.dist()
+                # take another scan and average the three together
+                scan1 = (scan1 + scan2 + scan3) / 3
+            self.scan[x] = scan1
+            print("Degree: " + str(x) + ", distance: " + str(scan1))
+            if scan1 < self.SAFE_STOP_DIST:
+                print("Doesn't look clear to me")
+                return False
         return True
 
 ####################################################
