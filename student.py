@@ -267,8 +267,6 @@ class Piggy(pigo.Pigo):
 
     def choose_path(self):
         """turns towards the more open space"""
-        choice = raw_input("Left/Right or Turn Until Clear?")
-
         self.wide_scan(count=3) # scan the area
         # picks left or right
         # create two variables, left_total and right_total
