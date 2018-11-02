@@ -234,6 +234,7 @@ class Piggy(pigo.Pigo):
             if self.is_clear():
                 self.cruise()
             else:
+                self.encB(8)
                 self.choose_path()
 
     def cruise(self):
