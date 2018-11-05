@@ -240,7 +240,7 @@ class Piggy(pigo.Pigo):
         """ drive straight while path is clear """
         self.fwd()
         while self.dist() > self.SAFE_STOP_DIST:
-            time.sleep(.25)
+            time.sleep(.15)
         self.stop()
 
     def is_clear(self):
@@ -268,8 +268,6 @@ class Piggy(pigo.Pigo):
     def choose_path(self):
         """turns towards the more open space"""
         self.wide_scan(count=5) # scan the area
-        # picks left or right
-        # create two variables, left_total and right_total
         left_total = 0
         right_total = 0
         # loop from self.MIDPOINT - 60 to self.MIDPOINT
