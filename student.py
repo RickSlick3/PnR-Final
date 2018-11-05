@@ -239,8 +239,6 @@ class Piggy(pigo.Pigo):
     def cruise(self):
         """ drive straight while path is clear """
         self.fwd()
-        while self.fwd():
-            self.tight_scan()
         while self.dist() > self.SAFE_STOP_DIST:
             time.sleep(.25)
         self.stop()
@@ -297,7 +295,7 @@ class Piggy(pigo.Pigo):
     def tight_scan(self):
         ### want to edit this method to be able to activate this while cruising
         """does a narrow scan while cruising"""
-        print("Running the tight_scan method.")
+        print("Running the tight scan method.")
         for x in range((self.MIDPOINT - 5), (self.MIDPOINT + 5), 5):
             self.servo(x)
             scan1 = self.dist()
