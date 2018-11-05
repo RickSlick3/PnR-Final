@@ -234,13 +234,13 @@ class Piggy(pigo.Pigo):
             if self.is_clear():
                 self.cruise()
             else:
-                self.encB(4)
                 self.choose_path()
 
     def cruise(self):
         """ drive straight while path is clear """
         self.fwd()
-        ### want to make the robot scan a small area while it drives
+        while self.fwd():
+            self.tight_scan()
         while self.dist() > self.SAFE_STOP_DIST:
             time.sleep(.25)
         self.stop()
