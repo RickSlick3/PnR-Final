@@ -239,9 +239,9 @@ class Piggy(pigo.Pigo):
     def cruise(self):
         """ drive straight while path is clear """
         self.fwd()
-        ### attempts to scan while driving
+        # scans while driving
         while True:
-            for angle in range(self.MIDPOINT-5, self.MIDPOINT+6, 5):
+            for angle in range(self.MIDPOINT-10, self.MIDPOINT+10, 5):
                 self.servo(angle)
                 if self.dist() < self.SAFE_STOP_DIST:
                     self.stop()
