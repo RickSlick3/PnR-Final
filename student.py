@@ -276,13 +276,13 @@ class Piggy(pigo.Pigo):
         self.wide_scan(count=5) # scan the area
         left_total = 0
         right_total = 0
-        # loop from self.MIDPOINT - 60 to self.MIDPOINT
-        for angle in range(self.MIDPOINT - 60, self.MIDPOINT):
+        # loop from self.MIDPOINT - 80 to self.MIDPOINT
+        for angle in range(self.MIDPOINT - 80, self.MIDPOINT):
             if self.scan[angle]:
                 # add up the numbers to right_total
                 right_total += self.scan[angle]
-        # loop from self.MIDPOINT to self.MIDPOINT + 60
-        for angle in range(self.MIDPOINT, self.MIDPOINT + 60):
+        # loop from self.MIDPOINT to self.MIDPOINT + 80
+        for angle in range(self.MIDPOINT, self.MIDPOINT + 80):
             if self.scan[angle]:
                 # add up the numbers to left_total
                 left_total += self.scan[angle]
@@ -295,26 +295,6 @@ class Piggy(pigo.Pigo):
             # turn left
             self.encL(4)
         return True
-
-    def wide_scan(self, count=2):
-        """moves servo 120 degrees and fills scan array, default count=2"""
-        self.flush_scan()
-        for x in range(self.MIDPOINT - 80, self.MIDPOINT + 80, count):
-            servo(x)
-            time.sleep(.1)
-            scan1 = us_dist(15)
-            time.sleep(.1)
-            # double check the distance
-            scan2 = us_dist(15)
-            # if I found a different distance the second time....
-            if abs(scan1 - scan2) > 2:
-                scan3 = us_dist(15)
-                time.sleep(.1)
-                # take another scan and average the three together
-                scan1 = (scan1 + scan2 + scan3) / 3
-            self.scan[x] = scan1
-            print("Degree: " + str(x) + ", distance: " + str(scan1))
-            time.sleep(.01)
 
 ####################################################
 ############### STATIC FUNCTIONS
