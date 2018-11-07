@@ -241,7 +241,7 @@ class Piggy(pigo.Pigo):
         self.fwd()
         # scans while driving
         while True:
-            for angle in range(self.MIDPOINT-10, self.MIDPOINT+10, 5):
+            for angle in range(self.MIDPOINT-15, self.MIDPOINT+15, 5):
                 self.servo(angle)
                 if self.dist() < self.SAFE_STOP_DIST:
                     self.stop()
