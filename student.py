@@ -296,6 +296,26 @@ class Piggy(pigo.Pigo):
             self.encL(4)
         return True
 
+    def wide_scan(self, count=2):
+        """moves servo 120 degrees and fills scan array, default count=2"""
+        self.flush_scan()
+        for x in range(self.MIDPOINT - 80, self.MIDPOINT + 80, count):
+            servo(x)
+            time.sleep(.1)
+            scan1 = us_dist(15)
+            time.sleep(.1)
+            # double check the distance
+            scan2 = us_dist(15)
+            # if I found a different distance the second time....
+            if abs(scan1 - scan2) > 2:
+                scan3 = us_dist(15)
+                time.sleep(.1)
+                # take another scan and average the three together
+                scan1 = (scan1 + scan2 + scan3) / 3
+            self.scan[x] = scan1
+            print("Degree: " + str(x) + ", distance: " + str(scan1))
+            time.sleep(.01)
+
 ####################################################
 ############### STATIC FUNCTIONS
 
