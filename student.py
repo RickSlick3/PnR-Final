@@ -245,6 +245,9 @@ class Piggy(pigo.Pigo):
                 self.servo(angle)
                 if self.dist() < self.SAFE_STOP_DIST:
                     self.stop()
+                    if self.dist() > self.SAFE_STOP_DIST:
+                        self.fwd()
+                        continue
                     return
 
         self.stop()

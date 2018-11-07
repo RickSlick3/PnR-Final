@@ -153,10 +153,7 @@ class Pigo(object):
     def dist(self):
         """takes a measurement from the ultrasonic sensor, prints and returns dist in cm"""
         measurement = us_dist(15)
-        if measurement < self.HARD_STOP_DIST:
-            print('hard stop triggered during dist')
-            self.stop()
-        time.sleep(.05)
+        time.sleep(.01)
         print('I see something ' + str(measurement) + "cm away")
         return measurement
 
