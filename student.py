@@ -250,8 +250,6 @@ class Piggy(pigo.Pigo):
                         continue
                     return
 
-        self.stop()
-
     def is_clear(self):
         """does a 3-point scan around the midpoint, returns false if a test fails"""
         print("Running the is_clear method.")
