@@ -242,8 +242,6 @@ class Piggy(pigo.Pigo):
                     raw_input("Fix your code")
                 self.choose_path()
 
-
-
     def cruise(self):
         """ drive straight while path is clear """
         self.fwd()
@@ -307,6 +305,10 @@ class Piggy(pigo.Pigo):
             # turn left
             self.encL(4)
         return True
+
+    # ADD A COUNTER TO CHOOSE_PATH if the robot turns left and right more than three times, encR(90 degrees).
+    # if the robot turns left and right more than three times, encR(90 degrees).
+    # This turn or moving forward will reset the count
 
     def is_clear_infront(self):
         """checks the scan array to see if there is a path ahead"""
