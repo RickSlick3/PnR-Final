@@ -299,11 +299,11 @@ class Piggy(pigo.Pigo):
         # if right is bigger:
         if right_total > left_total:
             # turn right
-            self.encR(4)
+            self.encR(3)
         # if left is bigger:
         if left_total > right_total:
             # turn left
-            self.encL(4)
+            self.encL(3)
         return True
 
     # ADD A COUNTER TO CHOOSE_PATH if the robot turns left and right more than three times, encR(90 degrees).
