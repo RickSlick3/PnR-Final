@@ -243,7 +243,7 @@ class Piggy(pigo.Pigo):
                 self.choose_path()
 
     def cruise(self):
-        """ drive straight while path is clear """
+        """ drive straight and scan for obstacles while path is clear """
         self.fwd()
         # scans while driving
         while True:
@@ -279,7 +279,7 @@ class Piggy(pigo.Pigo):
         return True
 
     def choose_path(self):
-        """turns towards the more open space"""
+        """scans large area and turns towards the more open space"""
         self.wide_scan(count=5) # scan the area
         left_total = 0
         right_total = 0
